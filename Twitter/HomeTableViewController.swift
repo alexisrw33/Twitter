@@ -24,7 +24,11 @@ class HomeTableViewController: UITableViewController {
         //trying to make the image not blurry
 //        profileImageView.layer.cornerRadius = 10.00
 //        profileImageView.clipToBounds = true
-
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.loadTweets()
     }
  
     @objc func loadTweets() {
